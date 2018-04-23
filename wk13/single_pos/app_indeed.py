@@ -1,3 +1,10 @@
+# Goal: To do the tasks for homework 13, but with Indeed website instead of NASA websites.
+# Result: Was able to display at least 1 position for the job search: 'Data Engineer'.
+# Future work: - To display all 16 positions on 1 page for the job search.
+#              - To also gather data from other search results. 
+
+
+
 from flask import Flask, render_template, jsonify, redirect
 from flask_pymongo import PyMongo
 import scrape_indeed
