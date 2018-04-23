@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Hot Finds</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="jumbotron text-center">
+      <h1>Data Engineer positions on Indeed</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Get scrape results!</a></p>
+    </div>
+
+    <!-- Craigslist Listings -->
+    <div class="row" id="indeed-positions">
+      <div class="col-md-12">
+          <ul style="list-style: none;">
+              {% for pos in positions_1 %}
+              <li> <h4 class="heading">{{positions_1.title}} </h4>
+                <h5 class="heading">{{positions_1.company}} {{positions_1.location}} </h5>
+                <small>{{positions_1.summary}}</small><br/>
+                <small>{{positions_1.link}}</small><br/>
+              </li>
+              {% endfor %}
+          </ul>
+
+      </div>
+    </div>
+
+  </div>
+</body>
+
+</html>
+
